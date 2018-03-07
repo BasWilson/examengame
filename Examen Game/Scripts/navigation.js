@@ -10,3 +10,10 @@ $('#closeButton').click(function() {
 function navToMenu() {
   $( ".mainMenu" ).fadeIn( "slow")
 }
+
+//Met deze click gaaan we het antwoord bekijken
+$('.gameButton').click(function() {
+  var clickedBtn = $(this).attr('id')
+  var answer = document.getElementById(clickedBtn).innerHTML;
+  checkAnswer(answer);
+});
