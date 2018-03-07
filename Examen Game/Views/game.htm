@@ -29,6 +29,7 @@
           <img class="object" id="obj5">
           <img class="object" id="obj6">
           <img class="object" id="obj7">
+          <img class="object" id="obj8">
         </div>
 
       </div>
@@ -44,6 +45,7 @@
 
     <!--Main Menu modal-->
     <div class="mainMenu">
+      <img class="logo" src="../Assets/rainbow.png">
       <a class="title">De Regenboog</a>
       <a id="playButton" class="button smallMargin width">Spelen</a>
       <a id="settingsButton" class="button smallMargin width">Settings</a>
@@ -57,20 +59,30 @@
         <a>Stel de maximale score in</a>
         <input id="maxScoreField" class="textfield smallMargin" placeholder="Maximale score">
         <a id="saveButton" class="button smallMargin">Opslaan</a>
+        <a id="output"></a>
       </div>
     </div>
 
+    <!--Results Menu modal-->
+    <div class="resultsOverlay">
+      <div class="resultsMenu">
+        <a id="closeButtonResults" class="closeButton">X</a>
+        <a class="title noMargin">Klaar, yay!</a>
+        <a id="scoreResult"></a>
+        <a id="errorsResult"></a>
+        <a id="resultsButton" class="button smallMargin">Sluit</a>
+      </div>
+    </div>
 
   </div>
-
+Made by bas
 </div>
 
 <body>
-  <script src="../scripts/jquery-3.3.1.min.js"></script>
-  <script src="../scripts/cookie.js"></script>
-  <script src="../scripts/navigation.js"></script>
-  <script src="../scripts/core.js"></script>
-  <script src="../scripts/gamesaves.js"></script>
-  <script src="../scripts/database.js"></script>
+  <script src="../Scripts/jquery-3.3.1.min.js"></script>
+  <script src="../Scripts/cookie.js"></script>
+  <script src="../Scripts/navigation.js"></script>
+  <script src="../Scripts/core.js"></script>
+  <script src="../Scripts/gamesaves.js"></script>
 </body>
 </html>

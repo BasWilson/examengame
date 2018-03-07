@@ -1,9 +1,9 @@
 /*
 Globale variablen
 */
-const objects = ["../Assets/ball.png", "../Assets/beach.png", "../Assets/car.png", "../Assets/cars.png", "../Assets/cone.png", "../Assets/cookies.png", "../Assets/flower.png", "../Assets/kerstboom.png", "../Assets/pie.png", "../Assets/star.png"];
+const objects = ["../Assets/poke.png", "../Assets/magnet.png", "../Assets/cat.png", "../Assets/dog.png", "../Assets/lamp.png", "../Assets/ruby.png", "../Assets/watch.png", "../Assets/cup.png", "../Assets/foto.png", "../Assets/hat.png", "../Assets/bowling.png", "../Assets/candy.png", "../Assets/fish.png", "../Assets/ball.png", "../Assets/beach.png", "../Assets/car.png", "../Assets/cars.png", "../Assets/cone.png", "../Assets/cookies.png", "../Assets/flower.png", "../Assets/kerstboom.png", "../Assets/pie.png", "../Assets/star.png"];
 var score = 0;
-var errors = 0;
+var reserrors = 0;
 var round = 1;
 var maxScore = 10;
 var objNumber = 0;
@@ -17,9 +17,9 @@ function startGame() {
 
   //Reset game
   score = 0;
-  errors = 0;
+  reserrors = 0;
   round = 1;
-  maxScore = Cookies.get('maxScore');
+  $('#score').text("Score: "+score);
 
   generateRound()
 }
@@ -27,13 +27,13 @@ function startGame() {
 function generateRound() {
 
   //De src van alle images blank zetten zodat ze niet meer te zien zijn
-  for (var i = 1; i < 8; i++) {
+  for (var i = 1; i < 9; i++) {
     var currentObject = "obj"+i;
     document.getElementById(currentObject).src = "";
   }
 
   //Dit nummer bepaalt hoeveel objecten er zijn
-  objNumber = Math.floor(Math.random() * 8) + 1;
+  objNumber = Math.floor(Math.random() * 9) + 1;
 
   //Nu hussellen we de objects array zodat t altijd random is
   objects.sort(function(a, b){return 0.5 - Math.random()});
@@ -78,18 +78,19 @@ function checkAnswer(answer) {
     if (score >= maxScore) {
       endGame();
     } else {
-      errors++;
       generateRound();
     }
 
   } else {
-
+    reserrors++;
   }
 }
 
 function endGame() {
-  saveGame(score);
-  exitGame();
+  showResults();
+  reserrors = reserrors;
+  $('#scoreResult').text("Score: "+score);
+  $('#errorsResult').text("Aantal fouten: "+reserrors);
 }
 
 function exitGame() {
