@@ -1,14 +1,28 @@
+//Navigeer naar game
 $('#playButton').click(function() {
-  $( ".mainMenu" ).fadeOut( "slow", function() {
+  $( ".mainMenu" ).hide(  function() {
+    $( ".inGame" ).fadeIn("fast")
   startGame();
 });
 });
 
-$('#closeButton').click(function() {
+//Navigeer naar settings
+$('#settingsButton').click(function() {
+  $( ".mainMenu" ).hide( function() {
+    $( ".settingsOverlay" ).fadeIn("fast")
+});
+})
+$('#closeButtonGame').click(function() {
   endGame();
 });
+
+$('#closeButtonSettings').click(function() {
+  $( ".mainMenu" ).fadeIn( "fast");
+  $( ".settingsOverlay" ).hide( "fast");
+});
 function navToMenu() {
-  $( ".mainMenu" ).fadeIn( "slow")
+  $( ".mainMenu" ).fadeIn( "fast");
+  $( ".inGame" ).hide( "fast");
 }
 
 //Met deze click gaaan we het antwoord bekijken

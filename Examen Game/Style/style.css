@@ -34,6 +34,9 @@ user-select: none;
   position: absolute;
   left: 0px;
   top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rightSide {
@@ -47,7 +50,26 @@ user-select: none;
   align-items: center;
 }
 
+.inGame {
+  display: none;
+}
 .mainMenu {
+  width: 100%;
+  height: 600px;
+  background-color: #272727;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settingsOverlay {
+  display: none;
+}
+.settingsMenu {
   width: 100%;
   height: 600px;
   background-color: #272727;
@@ -63,6 +85,19 @@ user-select: none;
 .mainMenuButton {
   margin-bottom: 250px !important;
 }
+
+.textfield {
+  background-color: #FED766;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  border: none;
+}
+.textfield::placeholder {
+  color: white;
+  font-size: 15px;
+}
+
 .button {
   background-color: #FED766;
   padding: 20px;
@@ -91,5 +126,27 @@ user-select: none;
 }
 .title {
   font-size: 25px;
-  margin-top: 200px;
+  margin-top: 150px;
+}
+
+.gameObjects {
+  padding: 50px;
+  margin: auto;
+}
+
+.object {
+  padding: 20px;
+}
+
+.noMargin {
+  margin: 0px;
+}
+
+.smallMargin {
+  margin: 20px;
+}
+
+.width {
+  width: 20%;
+  text-align: center;
 }

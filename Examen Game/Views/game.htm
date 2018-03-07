@@ -17,34 +17,48 @@
   <!--The view where the game plays, everything should be in here-->
   <div class="gameView">
 
-    <div class="leftSide">
-      <a id="closeButton" class="closeButton">X</a>
-      <div class="gameObjects">
-        <img class="object" id="obj0">
-        <img class="object" id="obj1">
-        <img class="object" id="obj2">
-        <img class="object" id="obj3">
-        <img class="object" id="obj4">
-        <img class="object" id="obj5">
-        <img class="object" id="obj6">
-        <img class="object" id="obj7">
-      </div>
+    <div class="inGame">
+      <div class="leftSide">
+        <a id="closeButtonGame" class="closeButton">X</a>
+        <div class="gameObjects">
+          <img class="object" id="obj0">
+          <img class="object" id="obj1">
+          <img class="object" id="obj2">
+          <img class="object" id="obj3">
+          <img class="object" id="obj4">
+          <img class="object" id="obj5">
+          <img class="object" id="obj6">
+          <img class="object" id="obj7">
+        </div>
 
+      </div>
+      <div class="rightSide">
+        <a class="text">Hoeveel plaatjes zie je?</a>
+        <a id="button0" class="button gameButton">1</a>
+        <a id="button1" class="button gameButton">2</a>
+        <a id="button2" class="button gameButton">3</a>
+        <a class="text" id="score"></a>
+      </div>
     </div>
-    <div class="rightSide">
-      <a class="text">Hoeveel plaatjes zie je?</a>
-      <a id="button0" class="button gameButton">1</a>
-      <a id="button1" class="button gameButton">2</a>
-      <a id="button2" class="button gameButton">3</a>
-      <a class="text" id="score"></a>
-    </div>
+
 
     <!--Main Menu modal-->
     <div class="mainMenu">
       <a class="title">De Regenboog</a>
-      <a id="playButton" class="button mainMenuButton">Spelen!</a>
+      <a id="playButton" class="button smallMargin width">Spelen</a>
+      <a id="settingsButton" class="button smallMargin width">Settings</a>
     </div>
 
+    <!--Settings Menu modal-->
+    <div class="settingsOverlay">
+      <div class="settingsMenu">
+        <a id="closeButtonSettings" class="closeButton">X</a>
+        <a class="title noMargin">Instellingen</a>
+        <a>Stel de maximale score in</a>
+        <input id="maxScoreField" class="textfield smallMargin" placeholder="Maximale score">
+        <a id="saveButton" class="button smallMargin">Opslaan</a>
+      </div>
+    </div>
 
 
   </div>
